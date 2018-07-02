@@ -1,0 +1,20 @@
+<div class="main-show">
+      <div class="topic-content">
+        <h1><%= @topic.content %></h1>
+      </div>
+
+   <div class="contents">
+        <h3 class="section-title">which opinion do you agree ?</h3>
+
+　　　
+        <div class="topic-blue">
+          <p><%= @topic.blue %></p>
+          <div class="botana"><%= link_to("follow blue opinion","/posts/#{@topic.id}") %></div>
+        </div>
+
+        <div class="topic-red">
+           <p><%= @topic.red %></p>
+            <div class="botanb"><%= link_to("follow red opinion","/posts/#{@topic.id}") %></div>
+        </div>
+    </div>
+</div>

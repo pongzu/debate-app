@@ -1,0 +1,13 @@
+<div class="main posts-index">
+  <div class="container">
+    <% @topics.each do |topic| %>
+      <div class="posts-index-item">
+          <%= topic.content %>
+        <span><%= link_to("join discussion！","/topics/#{topic.id}") %>/
+         <%= link_to("check  this content！","/posts/#{topic.id}") %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+  <div class= "make_topic" ><%= link_to("MAKE TOPIC", "/topics/top") %></div>
+</div>

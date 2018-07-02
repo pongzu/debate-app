@@ -1,0 +1,18 @@
+
+<%= @topic.content %> <span>について</span>
+<p>青の意見は</p><%= @topic.blue %>
+<p>赤の意見は</p><%= @topic.red %>
+
+<p> ------------------------------------------------------------------------------------------------</p>
+<p>以下で議論する</p>
+<p> ------------------------------------------------------------------------------------------------</p>
+
+
+<% @posts.each do |post| %>
+<p>  <%=post.content%></p>
+<% end%>
+
+<%= form_tag("/posts/#{@topic.id}/create") do %>
+  <textarea name = "content" ></textarea>
+  <input type ="submit" class="contact-submit" value=debate!">
+<% end %>

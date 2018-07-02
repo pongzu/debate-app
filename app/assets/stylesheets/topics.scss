@@ -1,0 +1,183 @@
+body {
+  font-family: "Avenir Next";
+}
+
+.section-title {
+  text-align:center;
+  border-bottom: 2px solid #dee7ec;
+  font-size: 28px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+
+.textpoint{
+ text-align: center;
+}
+
+
+.contenta {
+   width :600px;
+   margin-top :10px;
+   margin-bottom:30px;
+   padding-left: 2px;
+   padding-right: 50px;
+   padding-top: 5px;
+   padding-bottom: 50px;
+   font-size :18px;
+   color :black;
+   border :1px solid #dee7ec;
+   height :100;
+
+}
+.contentb {
+   width :600px;
+   margin-top :4px;
+   margin-bottom:0px;
+   padding-left: 2px;
+   padding-right: 50px;
+   padding-top: 5px;
+   padding-bottom: 50px;
+   font-size :18px;
+   color :blue;
+   border :1px solid #dee7ec;
+   height :0;
+}
+.contentc {
+   width :600px;
+   margin-top :4px;
+   margin-bottom:30px;
+   padding-left: 2px;
+   padding-right: 50px;
+   padding-top: 5px;
+   padding-bottom: 50px;
+   font-size :18px;
+   color :red;
+   border :1px solid #dee7ec;
+   height :0;
+}
+.iken{
+  color :blue;
+  font-weight:bold;
+}
+.taikouiken {
+  color :red;
+  font-weight:bold;
+}
+.gidai {
+  font-weight:bold;
+  text-align:center;
+}
+
+input {
+   width :200px;
+   margin-top :10px;
+   margin-bottom:30px;
+   padding :20px;
+   font-size :18px;
+   color :#dee7ec;
+   border :1px solid #dee7ec;
+
+}
+.contact-submit {
+   background-color :#dee7ec;
+   color :#889eab;
+}
+
+
+
+///show
+
+.main-show {
+  padding: 100px 80px;
+
+}
+
+
+.topic-content h1 {
+  font-size: 50px;
+  text-align :center;
+}
+
+.contents {
+  height: 500px;
+  margin-top: 100px;
+}
+
+.topic-blue{
+  text-align :center;
+  width :350px;
+  float: left;
+  margin-right: 2px;
+  color :blue;
+}
+.topic-red{
+  text-align :center;
+  width :350px;
+  float: right;
+  margin-right: 40px;
+  color :red;
+
+}
+
+
+.topic-blue p{
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.topic-red p{
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+
+.botana {
+
+    margin-top:200;
+    margin-left:500;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+
+
+    border-style: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.botanb {
+    margin-top:200;
+    margin-left:50;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+
+    border-style: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+///index パクリ
+.posts-index-item {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+  padding: 20px 30px;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.make_topic{
+  margin-left: 600px;
+  margin-right: 50px;
+  margin-top: 50px;
+  padding: 20px 30px;
+
+}
