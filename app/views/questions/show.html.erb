@@ -1,0 +1,9 @@
+<div class="box">
+   <div class="form-heading">
+     <h1><%=@question.content%></h1>
+   </div>
+     <div class="form-opinion-Red"><%= link_to("yes", "/questions/#{@question.id}/1", class: "ao")%></div>
+     <div class="form-opinion-Blue"><%= link_to("no", "/questions/#{@question.id}/0", class: "aka")%>
+   </div>
+ </div>
+

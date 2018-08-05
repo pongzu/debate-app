@@ -1,0 +1,23 @@
+<% if @error_message %>
+      <div class="error">
+        <%= @error_message %>
+      </div>
+<% end %>
+
+<div class="users-new">
+  <div class="container">
+    <div class="form-heading">Edit</div>
+    <div class="form users-form">
+      <div class="form-body">      
+        <%= form_tag("/users/#{@user.id}/update") do %>
+          <p>User Name</p>
+         <textarea name = "name" ><%=@user.name%></textarea>
+          <p>Password</p>
+          <textarea name = "password" ><%=@user.password%></textarea>
+          <input type="submit" value="Edit!">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

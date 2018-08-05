@@ -10,13 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_02_130056) do
+ActiveRecord::Schema.define(version: 2018_08_05_062655) do
+
+  create_table "discussions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "topic_id"
+    t.string "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string "position"
+    t.integer "topic_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "topic_id"
+    t.integer "users_id"
+    t.string "position"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "topics", force: :cascade do |t|
@@ -26,6 +50,7 @@ ActiveRecord::Schema.define(version: 2018_07_02_130056) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "topic_id"
+    t.integer "users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,6 +58,8 @@ ActiveRecord::Schema.define(version: 2018_07_02_130056) do
     t.integer "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "point"
+    t.string "nick_name"
   end
 
 end

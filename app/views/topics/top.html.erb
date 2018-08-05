@@ -1,17 +1,28 @@
+<% if @error_message %>
+      <div class="error">
+        <%= @error_message %>
+      </div>
+<% end %>
+
 <div class="debate-form">
-       <h3 class="section-title"> topic </h3>
-       <div class = "textpoint">
-       <p class ="gidai">what do you wanna talk about?</p>
-
-        <%= form_tag("/topics/create") do %>
+　<h3 class="section-title"> topic </h3>
+   <div class = "textpoint">
+     <p class ="gidai">what do you wanna talk about?</p>
+       <%= form_tag("/topics/create") do %>
          <textarea class="contenta" name = "content" ></textarea>
-       <p class = "iken">my opinion</p>
 
-       <textarea class ="contentb" name = "blue" ></textarea>
-        <p class = "taikouiken"> the other</p>
-       <textarea class ="contentc" name = "red"></textarea>
-       <p></p>
-       <input type ="submit" class="contact-submit" value="start dibating !">
-       <% end %>
-       </div>
+         <p class = "iken">my opinion</p>
+         <textarea class ="contentb" name = "blue" ></textarea>
+
+         <p class = "taikouiken"> the other</p>
+         <textarea class ="contentc" name = "red"></textarea><p></p>
+
+         <input type ="submit" class="contact-submit" value="start dibating !">
+
+      <% end %>
    </div>
+</div>
+
+
+
+

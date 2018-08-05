@@ -1,0 +1,23 @@
+<% if @error_message %>
+      <div class="error">
+        <%= @error_message %>
+      </div>
+<% end %>
+
+<div class="users-new">
+  <div class="container">
+    <div class="form-heading">Make An Account</div>
+    <div class="form users-form">
+      <div class="form-body">      
+        <%= form_tag("/users/create") do %>
+          <p>User Name</p>
+          <input name="name" >
+          <p>Password</p>
+          <input type="password" name="password">
+          <input type="submit" value="create!">
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

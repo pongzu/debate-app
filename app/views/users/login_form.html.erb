@@ -1,14 +1,23 @@
-<div class="top-hero-wrapper text-center">
-  <div class="container top-hero-container">
-    <h1 class="text-white">inspire your brain</h1>
-    <h2 class="text-white">Debate is a service that you can have a discussion </h2>
-    <div class="row">
-      <div class="col-md-offset-3 col-md-3">
-        <%= link_to 'Sign up', '#', class: 'btn btn-block btn-white' %>
+<% if @error_message %>
+      <div class="error">
+        <%= @error_message %>
       </div>
-      <div class="col-md-3">
-        <%= link_to 'Log in', '#',class: 'btn btn-block btn-white' %>
+<% end %>
+
+<div class="users-new">
+  <div class="container">
+    <div class="form-heading">SignIn</div>
+    <div class="form users-form">
+      <div class="form-body">      
+        <%= form_tag("/users/login") do %>
+          <p>User Name</p>
+          <input name="name">
+          <p>Password</p>
+          <input type="password" name="password">
+          <input type="submit" value="SignIn!">
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+

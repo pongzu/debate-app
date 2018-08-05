@@ -1,0 +1,24 @@
+<% if @error_message %>
+      <div class="error">
+        <%= @error_message %>
+      </div>
+<% end %>
+
+<div class="debate-form">
+<h3 class="section-title"> edit </h3>
+  <div class = "textpoint">
+  <p class ="gidai">isuue</p>
+    <%= form_tag("/topics/#{@topic.id}/update") do %>
+      <textarea class="contenta" name = "content" >  <%= @topic.content%>  </textarea>
+        <p class = "iken">my opinion</p>
+      <textarea class ="contentb" name = "blue" ><%= @topic.blue%></textarea>
+        <p class = "taikouiken"> the other</p>
+      <textarea class ="contentc" name = "red"><%= @topic.red%></textarea>
+         <p></p>
+      <input type ="submit" class="contact-submit" value="edit !">
+    <% end %>
+   </div>
+</div>
+
+
+

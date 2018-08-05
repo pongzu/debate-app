@@ -1,13 +1,15 @@
+<div class= "indexArea">
 <div class="main posts-index">
-  <div class="container">
     <% @topics.each do |topic| %>
       <div class="posts-index-item">
-          <%= topic.content %>
-        <span><%= link_to("join discussion！","/topics/#{topic.id}") %>/
-         <%= link_to("check  this content！","/posts/#{topic.id}") %>
-        </span>
+         <div class="topic-area"> 
+         <p class="user"><%= link_to(topic.user.name,"/users/#{topic.user.id}",class:"link-delite") %></p>
+           <%= link_to(topic.content,"/posts/#{topic.id}",class: "content") %>
+         </div>
+          <div class="join-box">
+　          <%= link_to("Join this discussion🔥","/topics/#{topic.id}",class: "join-for")%>
+　        </div>
       </div>
     <% end %>
-  </div>
-  <div class= "make_topic" ><%= link_to("MAKE TOPIC", "/topics/top") %></div>
+</div>
 </div>

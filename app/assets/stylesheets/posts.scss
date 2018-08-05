@@ -1,3 +1,134 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.postArea{
+margin-top: 50px;
+}
+
+  
+
+  .topic-content {
+     padding :auto;
+     font-weight: bold;
+     font-size: 25px;
+     color: black;
+     text-align: center;
+   }
+
+  .opinion-a{
+      margin-top: 15px;
+     margin-left :200px;
+     margin-right :10px;
+      width :500px;
+      height:40px;
+      border:1.5px solid black;
+      float: left;
+      text-align: center;
+  }
+  
+  .opinion-b{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    width :500px;
+    height:40px;
+    border:1.5px solid black;
+    float: left;
+    text-align: center;
+  }
+  
+  .opinion-blue {
+    text-decoration: none;
+    color :blue;
+    font-weight: 300;
+    line-height: 10px;
+  }
+  .opinion-red {
+    text-decoration: none;
+    color :red;
+    font-weight: 300;
+    line-height: 10px;
+  }
+  .PlaceForTextArea{
+    margin-top :50px;
+    width:100%;
+    height: 140px;
+    font-size: 30px;
+  }
+  .PlaceForInput {
+    text-align: center;
+    float:right;
+    color :black;
+    height :10px;
+    width :100px;
+    line-height: 8px;
+    border:1.5px solid black;
+  }
+ .name {
+     font-weight: bold;
+ }
+
+
+ 
+
+.Posts-index-item {
+  position: relative;
+  height: 100px;
+  width :100%;
+  margin-bottom:10px;
+  background-color: white;
+  overflow: hidden;
+  border:1.5px solid black;
+  text-align: center;
+}
+
+
+.topic-areax {
+  height :100px;
+  float: left;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  text-decoration: none;
+}
+.user-link-blue{
+  text-decoration: none;
+  color :blue;
+}
+
+.user-link-red{
+  text-decoration: none;
+  color:red;
+}
+
+
+
+.Edit{
+  width :100px;
+  height:20px;
+  border:1.5px solid black;
+  margin-top: 40px;
+  margin-left :1300px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  position: absolute;
+}
+.edit-place{
+  text-decoration: none;
+  color: black;
+}
+
+.Delite{
+  width :100px;
+  height:20px;
+  border:1.5px solid black;
+  margin-top: 70px;
+  margin-left :1300px;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.delite-place{
+  text-decoration: none;
+  color: black;
+}

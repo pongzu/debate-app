@@ -1,20 +1,22 @@
-<div class="main-show">
-      <div class="topic-content">
-        <h1><%= @topic.content %></h1>
-      </div>
+ <div class="box">
+   <div class="form-heading">
+     <h1><%=@topic.content%></h1>
+     <p>~Click the opinion you agree to join the discussion~</p>
+   </div>
+     <div class="form-opinion-Red"><%=link_to(@topic.blue,"/posts/#{@topic.id}",class:"ao") %></div>
+     <div class="form-opinion-Blue"><%=link_to(@topic.red,"/posts/#{@topic.id}",class:"aka") %>
+   </div>
+ </div>
 
-   <div class="contents">
-        <h3 class="section-title">which opinion do you agree ?</h3>
 
-　　　
-        <div class="topic-blue">
-          <p><%= @topic.blue %></p>
-          <div class="botana"><%= link_to("follow blue opinion","/posts/#{@topic.id}") %></div>
-        </div>
 
-        <div class="topic-red">
-           <p><%= @topic.red %></p>
-            <div class="botanb"><%= link_to("follow red opinion","/posts/#{@topic.id}") %></div>
-        </div>
-    </div>
-</div>
+
+ 
+ <%= link_to @topic.blue, positions_create_path(:topic_id => @topic.id, :position => "blue"), :method => 'post', class:"ao" %>
+  
+<%= link_to @topic.red, positions_create_path(:topic_id => @topic.id, :position => "red"), :method => 'post', class:"aka" %>
+  
+
+
+
+   

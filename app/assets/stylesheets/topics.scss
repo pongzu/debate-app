@@ -1,20 +1,18 @@
 body {
   font-family: "Avenir Next";
+  text-align: center;
 }
 
 .section-title {
   text-align:center;
-  border-bottom: 2px solid #dee7ec;
+  border-bottom: 1.5px solid black;
   font-size: 28px;
   padding-bottom: 15px;
   margin-bottom: 50px;
 }
-
-
 .textpoint{
  text-align: center;
 }
-
 
 .contenta {
    width :600px;
@@ -26,7 +24,7 @@ body {
    padding-bottom: 50px;
    font-size :18px;
    color :black;
-   border :1px solid #dee7ec;
+   border :1px solid black;
    height :100;
 
 }
@@ -40,7 +38,7 @@ body {
    padding-bottom: 50px;
    font-size :18px;
    color :blue;
-   border :1px solid #dee7ec;
+   border :1px solid black;
    height :0;
 }
 .contentc {
@@ -53,19 +51,19 @@ body {
    padding-bottom: 50px;
    font-size :18px;
    color :red;
-   border :1px solid #dee7ec;
+   border :1px solid black;
    height :0;
 }
 .iken{
   color :blue;
-  font-weight:bold;
+  font-weight:300;
 }
 .taikouiken {
   color :red;
-  font-weight:bold;
+  font-weight:300;
 }
 .gidai {
-  font-weight:bold;
+  font-weight:300;
   text-align:center;
 }
 
@@ -76,108 +74,134 @@ input {
    padding :20px;
    font-size :18px;
    color :#dee7ec;
-   border :1px solid #dee7ec;
+   border :1px solid black;
 
 }
 .contact-submit {
-   background-color :#dee7ec;
-   color :#889eab;
+   font-weight: 300;
+   color :black;
 }
 
 
 
 ///show
 
-.main-show {
-  padding: 100px 80px;
+.box{
+  width :1000px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin-top :100px;
+  margin-left :auto;
+  margin-right :auto;
+ }
 
+.form-heading {
+   padding :auto;
+   font-weight: 300px;
+   margin: 60px 0 20px;
+   font-size: 20px;
+   color: black;
+   font-weight:bold;
+   text-align: center;
+ }
+
+
+.form-heading p {
+ color :black;
+ font-weight: 300;
 }
 
+  
 
-.topic-content h1 {
-  font-size: 50px;
-  text-align :center;
+.form-opinion-Red{
+    width :1000px;
+    margin-top:100px;
+    margin-bottom:40px;
+    height:40px;
+    border:1.5px solid black;
+    float: left;
+    text-align: center;
 }
 
-.contents {
-  height: 500px;
-  margin-top: 100px;
-}
-
-.topic-blue{
-  text-align :center;
-  width :350px;
+.form-opinion-Blue{
+  width :1000px;
+  height:40px;
+  border:1.5px solid black;
   float: left;
-  margin-right: 2px;
+  text-align: center;
+}
+
+.ao {
+  padding-top :30px;
+  font-size: 23px;
+  text-decoration: none;
   color :blue;
+  line-height: 43px;
+  font-weight: 300;
 }
-.topic-red{
-  text-align :center;
-  width :350px;
-  float: right;
-  margin-right: 40px;
+.aka{
+  padding-top :30px;
+  font-size: 23px;
+  text-decoration: none;
   color :red;
-
+  line-height: 43px;
+  font-weight: 300;
 }
 
-
-.topic-blue p{
-  font-size: 24px;
-  margin-top: 30px;
-}
-
-.topic-red p{
-  font-size: 24px;
-  margin-top: 30px;
-}
-
-
-.botana {
-
-    margin-top:200;
-    margin-left:500;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 1.2em;
-
-
-    border-style: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
-.botanb {
-    margin-top:200;
-    margin-left:50;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 1.2em;
-
-    border-style: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
 
 
 
 ///index パクリ
-.posts-index-item {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 50px;
-  padding: 20px 30px;
-  background-color: white;
-  overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
+
+.indexArea {
+ margin-top :100px;
 }
 
-.make_topic{
-  margin-left: 600px;
-  margin-right: 50px;
-  margin-top: 50px;
-  padding: 20px 30px;
 
+.posts-index-item {
+  width :100%;
+  margin-bottom:10px;
+  background-color: white;
+  overflow: hidden;
+  border:1.5px solid black;
+  text-align: center;
+}
+
+.join-box{
+  width :200px;
+  margin-left:10px;
+  height:50px;
+  border:1.5px solid black;
+  margin-left :1200px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+.join-for {
+  text-decoration: none;
+  color :black;
+  line-height: 50px;
+}
+
+
+
+.topic-area {
+  height :10px;
+}
+
+
+.user {
+  font-weight: bold;
+  color :black;
+}
+
+.content {
+  text-decoration: none ;
+  color: black;
+}
+.link-delite {
+  text-decoration: none;
+  color :black;
 }

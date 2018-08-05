@@ -1,0 +1,37 @@
+
+  <div class="namearea">
+     <% if @user.id== @current_user.id%>
+        <h2 class="namearea-for"> <%=link_to(@user.name,"/users/#{@user.id}/edit", class: "usernameedit") %><h2>
+     <% else %>
+        <h2 class="namearea-for"> <%= @user.name %><h2>
+     <% end%>
+
+
+     <%if @current_user.nick_name%>
+       <h3 class="nicknamearea-for"> nickname：<%=@current_user.nick_name%></h3>
+     <% else %>
+       <%=link_to("wanna make your nickname?","/first_question",class: "nicknameLink")%>
+     <% end %>
+  </div>
+
+
+  <% @user.topics.each do |topic| %>
+    <div class="Posts-index-item">
+      <div class="topic-areax"> 
+        <p class="user"><%= topic.user.name %></p>
+          <%= link_to(topic.content,"/posts/#{topic.id}",class: "content") %>
+      </div>
+      <% if @current_user.id == @user.id%>
+        <div class="Edit">
+　         <%= link_to("Edit","/topics/#{topic.id}/edit", class: "edit-place")%>
+　      </div>
+        <div class="Delite">
+　         <%= link_to("Delete","/topics/#{topic.id}/destroy",method: "post", class: "delite-place")%> 
+　      </div>
+      <%end%>
+     </div>
+  <% end %>
+
+
+
+

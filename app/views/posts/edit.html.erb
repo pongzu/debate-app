@@ -1,0 +1,26 @@
+<% if @error_message %>
+      <div class="error">
+        <%= @error_message %>
+      </div>
+<% end %>
+
+
+<div class ="postArea">
+
+  <div class = "topicarea">
+     <div class="topic-content">
+     <%=@topic.content%>
+     </div>
+     <div class="opinion-a"> <p class ="opinion-blue "> <%=@topic.blue %> </p></div>
+     <div class="opinion-b"><p class ="opinion-red"><%=@topic.red%> </p></div>
+  </div>
+
+  <div class ="Place">
+     <%= form_tag("/posts/#{@post.id}/update") do %>
+       <textarea name = "content" class = "PlaceForTextArea" ><%=@post.content%></textarea>
+       <input type ="submit" class="PlaceForInput " value=edit>
+     <% end %>
+  </div>
+
+</div>
+
