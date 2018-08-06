@@ -18,15 +18,11 @@
       <div class="Posts-index-item">
          <div class="topic-areax">
 
-
            <%if post.position == "blue" %>  
              <p class="user"><%=link_to(post.user.name,"/users/#{post.user.id}",class: "user-link-blue") %></p>  
            <%else%>
              <p class="user"><%=link_to(post.user.name,"/users/#{post.user.id}",class: "user-link-red") %></p>  
            <%end%>
-
-
-
            <%= post.content %>
          </div>
 

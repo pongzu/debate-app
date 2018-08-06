@@ -12,7 +12,7 @@ end
 def create
   @topic = Topic.new(content: params[:content],blue: params[:blue], red: params[:red], users_id: @current_user.id)
   if @topic.save
-    flash[:notice]= "created a post"
+    flash[:notice]= "created a topic!"
     redirect_to("/posts/#{@topic.id}")
   else
     @error_message = "something is missing!"

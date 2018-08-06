@@ -5,18 +5,18 @@ class PostsController < ApplicationController
     @posts = Post.where(topic_id: @topic.id).order(created_at: :desc)
     @position = Position.find_by(topic_id: @topic.id, user_id: @current_user.id)
       if @position.position == "blue" 
-       flash[:notice] ="🔥you are going to discuss with blue opinion🔥"
+       flash.now[:notice] ="🔥you have agreed to blue opinion🔥"
       else
-       flash[:notice] ="🔥you are going to discuss with red opinion🔥"
+       flash.now[:notice] ="🔥you have agreed to blue opinion🔥"
       end
   end
 
 
 
-
   def create
-    @post = Post.new(content: params[:content], topic_id: params[:id], users_id: @current_user.id)
     @topic = Topic.find_by(id: params[:id])
+    @position = Position.find_by(topic_id: @topic.id, user_id: @current_user.id)
+    @post = Post.new(content: params[:content], topic_id: params[:id], users_id: @current_user.id, position: @position.position)
     if @post.save
       flash[:notice]= "created a post!"
       redirect_to("/posts/#{@topic.id}")
