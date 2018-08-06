@@ -12,6 +12,7 @@ end
 def create
   @topic = Topic.new(content: params[:content],blue: params[:blue], red: params[:red], users_id: @current_user.id)
   if @topic.save
+    Position.create(position: "blue", topic_id: @topic.id, user_id: @topic.users_id)
     flash[:notice]= "created a topic!"
     redirect_to("/posts/#{@topic.id}")
   else
@@ -33,6 +34,7 @@ end
 def show
   @topic =Topic.find_by(id: params[:id])
 end
+
 
 def edit
    @topic = Topic.find_by(id: params[:id]) 

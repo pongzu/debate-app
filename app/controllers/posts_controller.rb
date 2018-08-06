@@ -7,7 +7,7 @@ class PostsController < ApplicationController
       if @position.position == "blue" 
        flash.now[:notice] ="🔥you have agreed to blue opinion🔥"
       else
-       flash.now[:notice] ="🔥you have agreed to blue opinion🔥"
+       flash.now[:notice] ="🔥you have agreed to red opinion🔥"
       end
   end
 
