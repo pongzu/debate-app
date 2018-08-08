@@ -1,16 +1,19 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_user
+
   def show
     @topic = Topic.find_by(id: params[:id])
     @posts = Post.where(topic_id: @topic.id).order(created_at: :desc)
     @position = Position.find_by(topic_id: @topic.id, user_id: @current_user.id)
+    @position_blue = Position.where(topic_id: @topic.id, position: "blue").count
+    @position_red =  Position.where(topic_id: @topic.id, position: "red").count
       if @position.position == "blue" 
        flash.now[:notice] ="🔥you have agreed to blue opinion🔥"
       else
        flash.now[:notice] ="🔥you have agreed to red opinion🔥"
       end
   end
-
 
 
   def create

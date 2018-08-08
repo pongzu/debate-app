@@ -10,5 +10,4 @@ class PositionsController < ApplicationController
 
 
 
-
 end

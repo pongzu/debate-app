@@ -1,5 +1,7 @@
 class TopicsController < ApplicationController
 
+  before_action :authenticate_user, {only: [:top, :create,:destroy,:show,:edit,:update, :login_form, :login]}
+
 def top
 end
 

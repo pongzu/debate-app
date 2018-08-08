@@ -4,16 +4,29 @@
       </div>
 <% end %>
 
+
 <div class ="postArea">
   <div class = "topicarea">
     <div class="topic-content">
       <%=@topic.content%>
     </div>
-    <div class="opinion-a"> <p class ="opinion-blue "> <%=@topic.blue %> </p></div>
-    <div class="opinion-b"><p class ="opinion-red"><%=@topic.red%> </p></div>
+      <div class="opinion-a">
+        <p class ="opinion-blue "><%=@topic.blue %></p>
+          <div class = "count_position"> "<%= @position_blue%>" <span>people have agreed to this opinion</span>
+          </div>
+      </div>
+       <div class="opinion-b">
+         <p class ="opinion-red"><%=@topic.red%></p> 
+           <div class = "count_position"> "<%= @position_red%>"<span>people have agreed to this opinion</span>
+           </div>
+      </div>
   </div>
 
- <div class="main posts-index">
+
+
+
+
+ <div class="main posts-index-for-posts">
     <% @posts.each do |post| %>
       <div class="Posts-index-item">
          <div class="topic-areax">
@@ -47,5 +60,8 @@
   </div>
 
 </div>
+
+
+
 
 

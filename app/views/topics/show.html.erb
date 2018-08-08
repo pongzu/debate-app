@@ -3,8 +3,8 @@
      <h1><%=@topic.content%></h1>
      <p>~Click the opinion you agree to join the discussion~</p>
    </div>
-     <div class="form-opinion-Red"><%=link_to(@topic.blue,"/posts/#{@topic.id}",class:"ao") %></div>
-     <div class="form-opinion-Blue"><%=link_to(@topic.red,"/posts/#{@topic.id}",class:"aka") %>
+     <div class="form-opinion-Red"> <%= link_to @topic.blue, positions_create_path(:topic_id => @topic.id, :position => "blue"), :method => 'post', class:"ao" %></div>
+     <div class="form-opinion-Blue"><%= link_to @topic.red, positions_create_path(:topic_id => @topic.id, :position => "red"), :method => 'post', class:"aka" %>
    </div>
  </div>
 
@@ -12,9 +12,9 @@
 
 
  
- <%= link_to @topic.blue, positions_create_path(:topic_id => @topic.id, :position => "blue"), :method => 'post', class:"ao" %>
+
   
-<%= link_to @topic.red, positions_create_path(:topic_id => @topic.id, :position => "red"), :method => 'post', class:"aka" %>
+
   
 
 

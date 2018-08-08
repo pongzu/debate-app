@@ -9,17 +9,10 @@ class ApplicationController < ActionController::Base
     def authenticate_user
         if @current_user == nil 
         flash[:notice]= "need to login"
-        redirect_to("/login")
+        redirect_to("/topics/index")
         end
     end
-
-    def forbid_login_user
-        if @current_user 
-        flash[:notice] = "already"
-        redirect_to("topics/index")
-        end
-    end
-
-   
-    
 end
+
+
+

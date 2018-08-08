@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  before_action :authenticate_user, {only: [:show]}
+  before_action :forbid_login_user,{only: [:new,:create,:login_form,:login]}
+
   def show
     @user = User.find_by(id: params[:id])
   end
@@ -38,13 +41,11 @@ class UsersController < ApplicationController
   end
 
 
-
   def logout
     session[:user_id] = nil
     flash[:notice] = "logged out successfully."
     redirect_to("/login")
   end
-
 
 
   def edit
@@ -61,6 +62,14 @@ class UsersController < ApplicationController
     else 
       @error_message = "got wrong information."
       render("users/edit")
+    end
+  end
+
+  
+  def forbid_login_user
+    if @current_user 
+    flash[:notice] = "already logged in!"
+    redirect_to("/topics/index")
     end
   end
 
