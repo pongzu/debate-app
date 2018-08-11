@@ -1,5 +1,8 @@
 
   <div class="namearea">
+
+     <span> <%=link_to "follow", relationships_create_path(:following_id => @user.id), method: "post"%> </span>
+
      <% if @user.id== @current_user.id%>
         <h2 class="namearea-for"> <%=link_to(@user.name,"/users/#{@user.id}/edit", class: "usernameedit") %><h2>
      <% else %>
@@ -12,7 +15,30 @@
      <% else %>
        <%=link_to("wanna make your nickname?","/first_question",class: "nicknameLink")%>
      <% end %>
+
+
+     <div class = "relation">
+        <div class= "followers">
+          <p>followers</p>
+          <%=link_to @user.followers.count, "/users/#{@user.id}/followers" %>
+        </div>
+        <div class= "following">
+          <p>following</p>
+          <%=link_to @user.following.count, "/users/#{@user.id}/following" %>
+        </div>
+     </div>
+
+
   </div>
+
+
+
+
+
+
+
+
+
 
 
   <% @user.topics.each do |topic| %>

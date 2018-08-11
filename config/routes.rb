@@ -28,9 +28,9 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   get "users/:id/edit" => "users#edit"
   post "users/:id/update"=> "users#update"
-
-
-
+  get "users/:id/followers" => "users#followers"
+  get "users/:id/following" => "users#following"
+  
   #question 
    get "first_question" => "questions#first_question"
    get "questions/:id/show" => "questions#show"
@@ -38,13 +38,23 @@ Rails.application.routes.draw do
    get  "questions/sum" => "questions#sum"
    get "questions/result" => "questions#result"
 
-
-
-
   # position 
   
   post "positions/create" => "positions#create"
   
+ 
+
+  #follow
+  
+  post "relationships/create" =>  "relationships#create"
+  post "relationships/destroy" => "relationships#destroy"
+
+
+
+
+
+
+
 end
 
 
