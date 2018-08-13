@@ -21,46 +21,33 @@
       </div>
   </div>
 
- <div class="main posts-index-for-posts">
+ <div class="main index-for-posts">
     <% @posts.each do |post| %>
-      <div class="Posts-index-item">
-         <div class="topic-areax">
-
-           <%if post.position == "blue" %>  
-             <p class="user"><%=link_to(post.user.name,"/users/#{post.user.id}",class: "user-link-blue") %></p>  
-           <%else%>
-             <p class="user"><%=link_to(post.user.name,"/users/#{post.user.id}",class: "user-link-red") %></p>  
-           <%end%>
-           <%= post.content %>
-         </div>
-
-           <% if post.users_id == @current_user.id%>
-           <div class="Edit">
-　           <%= link_to("Edit","/posts/#{post.id}/edit",class: "edit-place")%>
-　         </div>
-           <div class="Delite">
-　           <%= link_to("Delete","/posts/#{post.id}/destroy",method: "post", class: "delite-place") %> 
-　         </div>
-         <%end%>
-        
-
+      <div class="posts-index-item">
+        <div class = "left"><img src="<%= "/user_images/default_user.jpg"%>"class="imageForPost" ></div>
+        <div class="centre">
+          <div class= "UserForIndex">
+            <%if post.position == "blue" %>  
+              <%=link_to(post.user.name,"/users/#{post.user.id}",class: "user-link-blue") %> 
+            <%else%>
+              <%=link_to(post.user.name,"/users/#{post.user.id}",class: "user-link-red") %>
+            <%end%>
+          </div>
+          <div class="ContentForIndex"><%= post.content %></div>
+        </div>
+        <div class="rights">
+          <% if post.users_id == @current_user.id%>
+            <div class="Edit">
+　            <%= link_to("Edit","/posts/#{post.id}/edit",class: "edit-place")%>
+　          </div>
+            <div class="Delite">
+　            <%= link_to("Delete","/posts/#{post.id}/destroy",method: "post", class: "delite-place") %> 
+　           </div>
+          <%end%>
+        </div>
       </div>
     <% end %>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div class ="PlaceForBox">
      <%= form_tag("/posts/#{@topic.id}/create") do %>

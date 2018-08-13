@@ -1,5 +1,33 @@
 
   /* users/new, users/edit ================================ */
+  ////
+.cont{
+  position: absolute;
+  right:50px;
+}
+
+.buttunleft{
+  width :200px;
+  height:40px;
+  border:1.5px solid  rgb(58, 57, 57);
+  display: inline-block;
+  border-radius: 20px;
+  margin-top:30px 
+}
+
+.buttuninit{
+  text-decoration: none;
+  color: rgb(58, 57, 57);
+  font-size: 30px;
+  font-weight: nomal;
+}
+
+.rights{
+  padding-left: 1300px;
+  margin-bottom: 100px;
+}
+  
+  
   .input {
     margin-bottom: 15px;
   }
@@ -9,12 +37,10 @@
 
   }
  .namearea {
-   margin: 10px auto;
-   margin-top: 50px;
-   margin-bottom: 30px;
+   margin-top: 10px;
+ 
    text-align: center;
    width: 100%;
-   
  }
  .namearea-for{
   font-size: 25px;
@@ -71,11 +97,8 @@
   display: inline-block;
   font-weight:normal;
 }
-.count{
-  
-  color:black;
-}
-////// nickname
+
+// nickname
 
 
 .nicknamearea-for{
@@ -98,27 +121,11 @@ font-size: 15px;
 }
 
 
-
-
 .picture{
   display: inline-block;
 }
 
-
-.buttunleft{
-  width :200px;
-  height:40px;
-  border:1.5px solid black;
-  display: inline-block;
-  border-radius: 20px;
-  position: absolute;
-  margin-left: 700px;
-  margin-top:30px 
-}
-
-.buttuninit{
+.count{
   text-decoration: none;
-  color: black;
-  font-size: 30px;
+  color:  rgb(58, 57, 57);
 }
-

@@ -1,10 +1,13 @@
-   <%if @user.id == @current_user.id%>
-     <div class="buttunleft"><%=link_to("Edit?","/users/#{@user.id}/edit", class: "buttuninit") %></div>
-   <%else%>
-     <div class="buttunleft"><%=link_to"follow?", relationships_create_path(:following_id => @user.id), method: "post", class: "buttuninit"%></div>
-   <%end%>
+   <div class ="cont">
+      <%if @user.id == @current_user.id%>
+       <div class="buttunleft"><%=link_to("Edit?","/users/#{@user.id}/edit", class: "buttuninit") %></div>
+      <%else%>
+       <div class="buttunleft"><%=link_to"follow?", relationships_create_path(:following_id => @user.id), method: "post", class: "buttuninit"%></div>
+      <%end%>
+   </div>
    
-  <div class="namearea">
+
+   <div class="namearea">
      <div class= "names">
        <div class = "justforname">
          <div class = "picture"><img src="<%= "/user_images/#{@user.image_name}"%>"class="imageForShow" ></div>
@@ -18,8 +21,6 @@
          <% end %>
        </div>
      </div>
-
-
      <div class = "relation">
         <div class= "followers">
           <div class = "countForFollow"><%=link_to @user.followers.count, "/users/#{@user.id}/followers", class: "count" %></div>
@@ -30,27 +31,26 @@
           <div class ="sentence"><p>following</p></div>
         </div>
      </div>
-
-
   </div>
 
 
-
-
   <% @user.topics.each do |topic| %>
-    <div class="Posts-index-item">
-      <div class="topic-areax"> 
-        <p class="user"><%= topic.user.name %></p>
-          <%= link_to(topic.content,"/posts/#{topic.id}",class: "content") %>
-      </div>
-      <% if @current_user.id == @user.id%>
-        <div class="Edit">
-　         <%= link_to("Edit","/topics/#{topic.id}/edit", class: "edit-place")%>
-　      </div>
-        <div class="Delite">
-　         <%= link_to("Delete","/topics/#{topic.id}/destroy",method: "post", class: "delite-place")%> 
-　      </div>
-      <%end%>
+    <div class="posts-index-item">
+        <div class = "topic-left"><img src="<%= "/user_images/default_user.jpg"%>"class="imageForindex" ></div>
+        <div class="topic-centre">
+            <div class= "UserForIndex"><%= link_to(topic.user.name,"/users/#{topic.user.id}",class:"link-delite") %></div>
+            <div class="ContentForIndex"><%= link_to(topic.content,"/posts/#{topic.id}",class: "content") %></div>
+        </div>
+        <div class="rights">
+        <% if @current_user.id == @user.id%>
+          <div class="Edit">
+　          <%= link_to("Edit","/topics/#{topic.id}/edit", class: "edit-place")%>
+　        </div>
+          <div class="Delite">
+　          <%= link_to("Delete","/topics/#{topic.id}/destroy",method: "post", class: "delite-place")%> 
+　        </div>
+        <%end%>
+        </div>
      </div>
   <% end %>
 

@@ -1,10 +1,11 @@
 
 .section-title {
   text-align:center;
-  border-bottom: 1.5px solid black;
+  border-bottom: 1.5px solid rgb(58, 57, 57);
   font-size: 28px;
   padding-bottom: 15px;
   margin-bottom: 50px;
+ color: rgb(58, 57, 57);
 }
 .textpoint{
  text-align: center;
@@ -19,8 +20,8 @@
    padding-top: 5px;
    padding-bottom: 50px;
    font-size :18px;
-   color :black;
-   border :1px solid black;
+   color :rgb(58, 57, 57);
+   border :2px solid rgb(58, 57, 57);
    height :100;
 
 }
@@ -33,7 +34,7 @@
    padding-top: 5px;
    padding-bottom: 50px;
    font-size :18px;
-   border :1px solid black;
+   border :2px solid rgb(58, 57, 57);
    height :0;
 }
 .contentc {
@@ -45,18 +46,21 @@
    padding-top: 5px;
    padding-bottom: 50px;
    font-size :18px;
-   border :1px solid black;
+   border :2px solid rgb(58, 57, 57);
    height :0;
 }
 .iken{
   font-weight:300;
+  color: rgb(58, 57, 57);
 }
 .taikouiken {
   font-weight:300;
+  color: rgb(58, 57, 57);
 }
 .gidai {
   font-weight:300;
   text-align:center;
+  color: rgb(58, 57, 57);
 }
 
 input {
@@ -66,12 +70,12 @@ input {
    padding :20px;
    font-size :18px;
    color :#dee7ec;
-   border :1px solid black;
+   border :2px solid rgb(58, 57, 57);
 
 }
 .contact-submit {
    font-weight: 300;
-   color :black;
+   color: rgb(58, 57, 57);
 }
 
 
@@ -195,7 +199,7 @@ right:0;
 
 .join-box {
  width: 300px;
- border: 1.5px solid rgb(27, 27, 27);
+ border: 1.5px solid rgb(146, 145, 145);
  border-radius: 200px;
  position: absolute;
  float:left
@@ -210,11 +214,11 @@ right:0;
 .link-delite {
   text-decoration: none;
   color :whitesmoke;
+  font-weight: bold;
 }
 
 .content {
   text-decoration: none ;
   color: whitesmoke;
 }
-
 
