@@ -7,8 +7,8 @@ class User < ApplicationRecord
 
 
 
-  def following?(otehr_user)
-    following.include?(other_users)
+  def following?(a)
+    following.include?(a)
   end
 
 

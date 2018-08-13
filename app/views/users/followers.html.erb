@@ -1,3 +1,16 @@
 <%@followers.each do |follower|%>
-<%=follower.name%>
-<%end%>
+    <div class="posts-index-item">
+        <div class = "topic-left"><img src="<%= "/user_images/default_user.jpg"%>"class="imageForindex" ></div>
+        <div class="topic-centre">
+            <div class= "UserForIndex"><%= link_to(follower.name,"/users/#{follower.id}",class:"link-delite") %></div>
+            <div class="ContentForIndex"><%=follower.nick_name%></div>
+        </div>
+        <div class="right">
+        <% if @current
+　        <p>フォロー外すs？</p>
+        <%else%>
+　         <p>フォローするunko？</p>
+    <%end%>
+        </div>
+     </div>
+     <%end%>

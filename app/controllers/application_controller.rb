@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
     def authenticate_user
         if @current_user == nil 
-        flash[:notice]= "need to login"
+        flash[:notice] = "need to login"
         redirect_to("/topics/index")
         end
     end

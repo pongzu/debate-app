@@ -3,7 +3,6 @@
         <%= @error_message %>
       </div>
 <% end %>
-
 <div class ="postArea">
   <div class = "topicarea">
     <div class="topic-content">
@@ -20,6 +19,11 @@
            </div>
       </div>
   </div>
+
+ <div class="notification"> <%=@notification %></div>
+
+
+
 
  <div class="main index-for-posts">
     <% @posts.each do |post| %>

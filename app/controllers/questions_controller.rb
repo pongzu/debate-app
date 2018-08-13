@@ -1,9 +1,13 @@
 class QuestionsController < ApplicationController
 
-before_action :set_point, {only: [:first_question]}
-
- def first_question
-    @question = Question.find_by(id:1)
+ def show
+  if params[:id].to_i != 0
+   @question = Question.find_by(id: params[:id])
+  else
+    @current_user.point = 0   #renew userpoint 
+    @current_user.save
+    @question = Question.find(1)
+  end
  end
 
 
@@ -23,16 +27,9 @@ def count_point
 end
 
 
- def show
-   @question = Question.find_by(id: params[:id])
-   @current_user.point
- end
-
-
  def sum 
    @current_user.nick_name =  
       case @current_user.point
-        
        when 0 then "名無しさん"
        when 1 then "あだ名１"
        when 2 then "あだ名2"
@@ -43,19 +40,9 @@ end
      redirect_to(action: 'result')
  end
 
-
-
  def result
    @nick_name = @current_user.nick_name
  end
-
-
-
-
-def set_point
-  @current_user.point = 0
-  @current_user.save
-end
 
 end
 

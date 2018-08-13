@@ -32,7 +32,6 @@ Rails.application.routes.draw do
   get "users/:id/following" => "users#following"
   
   #question 
-   get "first_question" => "questions#first_question"
    get "questions/:id/show" => "questions#show"
    get "questions/:id/:point" => "questions#count_point"
    get  "questions/sum" => "questions#sum"

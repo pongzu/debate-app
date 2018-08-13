@@ -17,7 +17,7 @@
          <%if @current_user.nick_name%>
            <h3 class="nicknamearea-for"> nickname：<%=@current_user.nick_name%></h3>
          <% else %>
-           <%=link_to("wanna make your nickname?","/first_question",class: "nicknameLink")%>
+           <%=link_to("wanna make your nickname?","/questions/0/show",class: "nicknameLink")%>
          <% end %>
        </div>
      </div>
