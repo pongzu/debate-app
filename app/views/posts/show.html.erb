@@ -4,7 +4,6 @@
       </div>
 <% end %>
 
-
 <div class ="postArea">
   <div class = "topicarea">
     <div class="topic-content">
@@ -22,10 +21,6 @@
       </div>
   </div>
 
-
-
-
-
  <div class="main posts-index-for-posts">
     <% @posts.each do |post| %>
       <div class="Posts-index-item">
@@ -39,7 +34,7 @@
            <%= post.content %>
          </div>
 
-         <% if post.users_id == @current_user.id%>
+           <% if post.users_id == @current_user.id%>
            <div class="Edit">
 　           <%= link_to("Edit","/posts/#{post.id}/edit",class: "edit-place")%>
 　         </div>
@@ -47,10 +42,25 @@
 　           <%= link_to("Delete","/posts/#{post.id}/destroy",method: "post", class: "delite-place") %> 
 　         </div>
          <%end%>
+        
 
       </div>
     <% end %>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class ="PlaceForBox">
      <%= form_tag("/posts/#{@topic.id}/create") do %>

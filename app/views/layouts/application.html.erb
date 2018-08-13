@@ -9,13 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-     <header>
-      <div class="header-logo">
-          <%= link_to("Debate", "/") %>
-      </div>
+    <header>
+      <div class="header-logo"><%= link_to("Debate", "/") %></div>
       <ul class="header-menus">
         <% if @current_user %>
-        <li>
+          <li>
             <%= link_to("make topic!", "/topics/top") %>
           </li>
           <li>
@@ -34,9 +32,16 @@
           <li>
             <%= link_to("login", "/login") %>
           </li>
+          <li>
+            <%= link_to("login", "/login") %>
+          </li>
+          <li>
+            <%= link_to("login", "/login") %>
+          </li>
         <% end %>
       </ul>
-  </header>
+    </header>
+
   <% if flash[:notice] %>
       <div class="flash">
         <%= flash[:notice] %>

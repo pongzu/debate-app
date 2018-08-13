@@ -1,42 +1,38 @@
-
+   <%if @user.id == @current_user.id%>
+     <div class="buttunleft"><%=link_to("Edit?","/users/#{@user.id}/edit", class: "buttuninit") %></div>
+   <%else%>
+     <div class="buttunleft"><%=link_to"follow?", relationships_create_path(:following_id => @user.id), method: "post", class: "buttuninit"%></div>
+   <%end%>
+   
   <div class="namearea">
-
-     <span> <%=link_to "follow", relationships_create_path(:following_id => @user.id), method: "post"%> </span>
-
-     <% if @user.id== @current_user.id%>
-        <h2 class="namearea-for"> <%=link_to(@user.name,"/users/#{@user.id}/edit", class: "usernameedit") %><h2>
-     <% else %>
-        <h2 class="namearea-for"> <%= @user.name %><h2>
-     <% end%>
-
-
-     <%if @current_user.nick_name%>
-       <h3 class="nicknamearea-for"> nickname：<%=@current_user.nick_name%></h3>
-     <% else %>
-       <%=link_to("wanna make your nickname?","/first_question",class: "nicknameLink")%>
-     <% end %>
+     <div class= "names">
+       <div class = "justforname">
+         <div class = "picture"><img src="<%= "/user_images/#{@user.image_name}"%>"class="imageForShow" ></div>
+         <h2 class="namearea-for"> <%= @user.name %><h2>
+       </div>
+       <div class = "justfornickname">
+         <%if @current_user.nick_name%>
+           <h3 class="nicknamearea-for"> nickname：<%=@current_user.nick_name%></h3>
+         <% else %>
+           <%=link_to("wanna make your nickname?","/first_question",class: "nicknameLink")%>
+         <% end %>
+       </div>
+     </div>
 
 
      <div class = "relation">
         <div class= "followers">
-          <p>followers</p>
-          <%=link_to @user.followers.count, "/users/#{@user.id}/followers" %>
+          <div class = "countForFollow"><%=link_to @user.followers.count, "/users/#{@user.id}/followers", class: "count" %></div>
+          <div class = "sentence"><p>followers</p></div>
         </div>
         <div class= "following">
-          <p>following</p>
-          <%=link_to @user.following.count, "/users/#{@user.id}/following" %>
+          <div class="countForFollow"><%=link_to @user.following.count, "/users/#{@user.id}/following",class: "count" %></div>
+          <div class ="sentence"><p>following</p></div>
         </div>
      </div>
 
 
   </div>
-
-
-
-
-
-
-
 
 
 

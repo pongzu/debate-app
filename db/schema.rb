@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_11_072523) do
+ActiveRecord::Schema.define(version: 2018_08_11_100224) do
 
   create_table "discussions", force: :cascade do |t|
     t.integer "user_id"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2018_08_11_072523) do
     t.datetime "updated_at", null: false
     t.integer "point"
     t.string "nick_name"
+    t.string "image_name"
   end
 
 end

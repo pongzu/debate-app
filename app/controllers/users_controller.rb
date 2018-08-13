@@ -17,15 +17,11 @@ class UsersController < ApplicationController
     @following = @user.following
   end
 
-
-
-
-
   def new
   end
 
   def create
-    @user = User.new(name: params[:name], password: params[:password])
+    @user = User.new(name: params[:name], password: params[:password], image_name: "default_user.jpg")
     if @user.save
       session[:user_id] =@user.id
       flash[:notice] = "created your account successfully."
@@ -70,6 +66,13 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.password = params[:password]
+
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    end
+
     if @user.save
       flash[:notice] = "updated your information"
       redirect_to("/users/#{@user.id}")

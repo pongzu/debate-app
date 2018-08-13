@@ -4,24 +4,20 @@
     margin-bottom: 15px;
   }
 
-  .container {
-    margin: 60px auto;
-    clear: both;
-  }
-
   .user_name_at{
     text-align: center;
 
   }
  .namearea {
    margin: 10px auto;
-   margin-bottom: 100px;
+   margin-top: 50px;
+   margin-bottom: 30px;
    text-align: center;
    width: 100%;
    
  }
  .namearea-for{
-  font-size: 40px;
+  font-size: 25px;
 }
 
  .henshu {
@@ -36,16 +32,93 @@
   color :black;
 }
 
-////// nickname
 
+////justforname
+.justforname{
+ text-align: center;
+}
+
+
+.justfornickname{
+  margin-bottom: 0;
+}
+////follow
+
+.relation{
+  text-align: center;
+}
+
+.followers{
+  display: inline-block;
+  margin-right:10px;
+  font-size:15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.following {
+  display: inline-block;
+  font-size:15px;
+  font-weight: bold;
+}
+
+
+.countForFollow{
+  display: inline-block;
+  
+}
+.sentence{
+  display: inline-block;
+  font-weight:normal;
+}
+.count{
+  
+  color:black;
+}
+////// nickname
 
 
 .nicknamearea-for{
 display: inline-block;
-
+font-size: 15px;
 }
 
 .nicknameLink{
   color: black;
   font-weight: normal;
 }
+
+
+
+//picture
+.imageForShow {
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  width:  150px;       /* ※縦横を同値に */
+  height: 150px;       /* ※縦横を同値に */
+}
+
+
+
+
+.picture{
+  display: inline-block;
+}
+
+
+.buttunleft{
+  width :200px;
+  height:40px;
+  border:1.5px solid black;
+  display: inline-block;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: 700px;
+  margin-top:30px 
+}
+
+.buttuninit{
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
