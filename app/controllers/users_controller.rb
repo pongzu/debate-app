@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+
+
+
   def followers
     @user = User.find(params[:id])
     @followers = @user.followers
@@ -16,6 +19,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @following = @user.following
   end
+
 
   def new
   end
@@ -91,5 +95,9 @@ class UsersController < ApplicationController
   end
 
 end
+
+
+
+
 
 
