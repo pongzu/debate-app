@@ -6,16 +6,14 @@
             <div class="ContentForIndex"><%=follower.nick_name%></div>
         </div>
         <div class="right">
-        <% if @current_user.following?(follower) != true %>
+        <% if @current_user.following?(follower) && @current_user.id != follower.id%>
+　        <p>フォロー外す？</p>
+        <% elsif @current_user.id != follower.id && @current_user.following?(follower) != true%>
 　        <p>フォローする？</p>
-        <%elsif @current_user.id ==follower.id %>
-　        <p>うんこ</p>
         <%else%>
-          <p>フォロー外す？</p>
+          <p>うんこっこ</p>
         <%end%>
         </div>
      </div>
 <%end%>
-
-
 
