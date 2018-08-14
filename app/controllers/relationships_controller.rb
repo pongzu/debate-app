@@ -11,6 +11,4 @@ def destroy
     redirect_to("/users/#{params[:following_id].to_i}")
 end
 
-
-
 end
