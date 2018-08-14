@@ -7,13 +7,22 @@
           <div class = "topic-left"><img src="<%= "/user_images/default_user.jpg"%>"class="imageForindex" ></div>
           <div class="topic-centre">
             <div class= "UserForIndex"><%= link_to(topic.user.name,"/users/#{topic.user.id}",class:"link-delite") %></div>
-            <div class="ContentForIndex"><%= link_to(topic.content,"/posts/#{topic.id}",class: "content") %></div>
+            <div class="ContentForIndex"><%=topic.content %></div>
           </div>
           <div class="topic-right">
-　          <div class="join-box"><%= link_to("🔥Join this discussion🔥","/topics/#{topic.id}",class: "join-for")%></div>
+              <% @postion = Position.find_by(topic_id: topic.id, user_id: @current_user.id) %>
+              <%if @postion %>  
+                  <div class="join-box"><%=link_to("🔥Continue discussion🔥","/posts/#{topic.id}",class: "join-for")%></div>
+              <%else%>
+                  <div class="join-box"><%= link_to("🔥Join discussion🔥","/topics/#{topic.id}",class: "join-for")%></div>
+              <%end%>
           </div>
         </div>
     <% end %>
    </div>
 
   
+
+
+
+

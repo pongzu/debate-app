@@ -6,8 +6,4 @@ class PositionsController < ApplicationController
     redirect_to("/posts/#{@position.topic_id}")
   end
 
- 
-
-
-
 end

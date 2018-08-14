@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get "topics/:id" => "topics#show"
  
 #post
-
   post "posts/:id/create" => "posts#create"
   get "posts/:id" => "posts#show"
   get "posts/:id/edit" => "posts#edit"
@@ -38,19 +37,12 @@ Rails.application.routes.draw do
    get "questions/result" => "questions#result"
 
   # position 
-  
   post "positions/create" => "positions#create"
-  
- 
 
   #follow
   
   post "relationships/create" =>  "relationships#create"
   post "relationships/destroy" => "relationships#destroy"
-
-
-
-
 
 
 
