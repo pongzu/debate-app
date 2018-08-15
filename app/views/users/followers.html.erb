@@ -7,13 +7,15 @@
         </div>
         <div class="right">
         <% if @current_user.following?(follower) && @current_user.id != follower.id%>
-　        <p>フォロー外す？</p>
+　       <div class ="Follow"><%=link_to"Unfollow?", relationships_destroy_path(:following_id => follower.id ), method: "post", class: "follow-place"%></div>
         <% elsif @current_user.id != follower.id && @current_user.following?(follower) != true%>
-　        <p>フォローする？</p>
+　       <div class = "Follow"><%=link_to"Follow?", relationships_create_path(:following_id => follower.id ), method: "post", class: "follow-place"%></div>
         <%else%>
-          <p>うんこっこ</p>
+          <p></p>
         <%end%>
         </div>
      </div>
+    
 <%end%>
+
 

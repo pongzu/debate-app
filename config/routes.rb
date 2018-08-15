@@ -44,8 +44,6 @@ Rails.application.routes.draw do
   post "relationships/create" =>  "relationships#create"
   post "relationships/destroy" => "relationships#destroy"
 
-
-
 end
 
 
