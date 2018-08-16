@@ -38,7 +38,7 @@
 
   <% @user.topics.each do |topic| %>
     <div class="posts-index-item">
-        <div class = "topic-left"><img src="<%= "/user_images/default_user.jpg"%>"class="imageForindex" ></div>
+        <div class = "topic-left"><img src="<%= "/user_images/#{@user.image_name}"%>"class="imageForindex" ></div>
         <div class="topic-centre">
             <div class= "UserForIndex"><%= link_to(topic.user.name,"/users/#{topic.user.id}",class:"link-delite") %></div>
             <div class="ContentForIndex"><%= link_to(topic.content,"/posts/#{topic.id}",class: "content") %></div>

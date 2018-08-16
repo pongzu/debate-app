@@ -23,12 +23,10 @@
  <div class="notification"> <%=@notification %></div>
 
 
-
-
  <div class="main index-for-posts">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
-        <div class = "left"><img src="<%= "/user_images/default_user.jpg"%>"class="imageForPost" ></div>
+        <div class = "topic-left"><img src="<%= "/user_images/#{post.user.image_name}"%>"class="imageForindex" ></div>
         <div class="centre">
           <div class= "UserForIndex">
             <%if post.position == "blue" %>  
